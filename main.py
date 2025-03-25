@@ -49,5 +49,5 @@ if uploaded_file is not None:
         axs[1].set(title='Cleaned Audio Spectrogram')
 
         st.pyplot(fig)
-
+        st.download_button("Download Cleaned Audio", enhanced_numpy.tobytes(), "cleaned_audio.wav")
         st.write(f"DeepFilterNet's GitHub repo: <a href='https://github.com/Rikorose/DeepFilterNet'>https://github.com/Rikorose/DeepFilterNet</a>", unsafe_allow_html=True)
